@@ -23,7 +23,13 @@
 
 
             @foreach ($listItems as $listItem)
-             <p>Item: {{ $listItem->name }}</p>
+             <div class="flex" style="align-items: center">
+                <p>Item: {{ $listItem->name }}</p>
+             <form action="{{ route('markComplete', $listItem ->id) }}" method="post">
+                {{ csrf_field() }}
+                <button type="submit" style="max-height: 25px; margin-left:25px; ">Mark Complete</button>
+             </form>
+             </div>
             @endforeach
 
 

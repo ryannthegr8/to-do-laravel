@@ -23,3 +23,4 @@ use App\Http\Controllers\ToDoListController;
 Route::get("/", [ToDoListController::class, 'index'] );
 
 Route::post('/saveItem', [ToDoListController::class, 'saveItem'])-> name('saveItem');
+Route::post('/markComplete/{id}', [ToDoListController::class, 'markComplete'])-> name('markComplete');
