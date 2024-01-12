@@ -14,11 +14,6 @@ use App\Http\Controllers\ToDoListController;
 |
 */
 
-// Default route is the one below
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Route::get("/", [ToDoListController::class, 'index'] );
 
